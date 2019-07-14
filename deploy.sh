@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 docker build -t thouseefkm/multi-client:latest -t thouseefkm/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t thouseefkm/multi-server:latest -t thouseefkm/multi-server:$SHA -f ./client/Dockerfile ./server
-docker build -t thouseefkm/multi-worker:latest -t thouseefkm/multi-worker:$SHA -f ./client/Dockerfile ./worker
+docker build -t thouseefkm/multi-server:latest -t thouseefkm/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t thouseefkm/multi-worker:latest -t thouseefkm/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push thouseefkm/multi-client:latest
 docker push thouseefkm/multi-server:latest
